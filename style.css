@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem; /* Aumentei o tamanho da fonte do título */
   margin-bottom: 20px;
 }
 
@@ -35,27 +35,28 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  flex-wrap: nowrap; /* Manter os itens lado a lado nas telas grandes */
 }
 
 .countdown div {
-  display: inline-block;
-  margin: 0 10px;
   text-align: center;
+  flex: 1 1 22%; /* 22% para cada item nas telas grandes, todos em uma linha */
+  margin-bottom: 15px;
 }
 
 .countdown div span {
   display: block;
-  font-size: 3rem;
+  font-size: 4rem; /* Aumentei o tamanho dos números */
   font-weight: 700;
 }
 
 .label {
-  font-size: 1rem;
+  font-size: 1.25rem; /* Aumentei o tamanho das labels */
   color: hsl(0, 0%, 80%);
 }
 
 #finished {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Aumentei o tamanho da mensagem final */
   color: hsl(120, 100%, 50%);
 }
 
@@ -64,15 +65,49 @@ h1 {
 }
 
 .verse {
-  font-size: 1.5rem;
+  font-size: 1.75rem; /* Aumentei o tamanho dos versículos */
   font-style: italic;
   margin-top: 20px;
   color: hsl(0, 0%, 90%);
 }
 
+/* Para dispositivos menores */
 @media (max-width: 48rem) {
+  .countdown {
+    flex-wrap: wrap; /* Permitir quebra de linha em telas pequenas */
+  }
+
+  .countdown div {
+    flex: 1 1 45%; /* Dois por linha (dias/hora e minuto/segundo) */
+    margin-bottom: 10px;
+  }
+
   .countdown div span {
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Para celulares */
+@media (max-width: 30rem) {
+  .countdown {
+    flex-wrap: wrap; /* Manter dois por linha em telas muito pequenas */
+  }
+
+  .countdown div {
+    flex: 1 1 45%; /* Dois por linha em celulares */
+    margin-bottom: 10px;
+  }
+
+  .countdown div span {
+    font-size: 2.5rem; /* Tamanho reduzido para caber bem na tela */
   }
 
   .label {
@@ -82,26 +117,8 @@ h1 {
   h1 {
     font-size: 2rem;
   }
-}
 
-@media (max-width: 30rem) {
-  .countdown {
-    flex-direction: column;
-  }
-
-  .countdown div {
-    margin: 10px 0;
-  }
-
-  .countdown div span {
-    font-size: 1.5rem;
-  }
-
-  .label {
-    font-size: 0.75rem;
-  }
-
-  h1 {
+  .verse {
     font-size: 1.5rem;
   }
 }
