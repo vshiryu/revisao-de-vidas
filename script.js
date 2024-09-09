@@ -92,6 +92,4 @@ function startMusicOnInteraction() {
 }
 
 document.addEventListener("click", startMusicOnInteraction, { once: true });
-document.addEventListener("touchstart", startMusicOnInteraction, {
-  once: true,
-});
+document.addEventListener("touchend", startMusicOnInteraction, { once: true });
