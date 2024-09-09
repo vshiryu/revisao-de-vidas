@@ -27,7 +27,7 @@ body {
 }
 
 h1 {
-  font-size: 3rem; /* Aumentei o tamanho da fonte do título */
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
@@ -35,28 +35,28 @@ h1 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  flex-wrap: nowrap; /* Manter os itens lado a lado nas telas grandes */
+  flex-wrap: nowrap;
 }
 
 .countdown div {
   text-align: center;
-  flex: 1 1 22%; /* 22% para cada item nas telas grandes, todos em uma linha */
+  flex: 1 1 22%; 
   margin-bottom: 15px;
 }
 
 .countdown div span {
   display: block;
-  font-size: 4rem; /* Aumentei o tamanho dos números */
+  font-size: 2rem; 
   font-weight: 700;
 }
 
 .label {
-  font-size: 1.25rem; /* Aumentei o tamanho das labels */
+  font-size: 1.15rem;
   color: hsl(0, 0%, 80%);
 }
 
 #finished {
-  font-size: 2.5rem; /* Aumentei o tamanho da mensagem final */
+  font-size: 2.5rem;
   color: hsl(120, 100%, 50%);
 }
 
@@ -65,25 +65,24 @@ h1 {
 }
 
 .verse {
-  font-size: 1.75rem; /* Aumentei o tamanho dos versículos */
+  font-size: 1.75rem;
   font-style: italic;
   margin-top: 20px;
   color: hsl(0, 0%, 90%);
 }
 
-/* Para dispositivos menores */
 @media (max-width: 48rem) {
   .countdown {
-    flex-wrap: wrap; /* Permitir quebra de linha em telas pequenas */
+    flex-wrap: wrap;
   }
 
   .countdown div {
-    flex: 1 1 45%; /* Dois por linha (dias/hora e minuto/segundo) */
+    flex: 1 1 45%;
     margin-bottom: 10px;
   }
 
   .countdown div span {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .label {
@@ -95,19 +94,19 @@ h1 {
   }
 }
 
-/* Para celulares */
+
 @media (max-width: 30rem) {
   .countdown {
-    flex-wrap: wrap; /* Manter dois por linha em telas muito pequenas */
+    flex-wrap: wrap; 
   }
 
   .countdown div {
-    flex: 1 1 45%; /* Dois por linha em celulares */
+    flex: 1 1 45%; 
     margin-bottom: 10px;
   }
 
   .countdown div span {
-    font-size: 2.5rem; /* Tamanho reduzido para caber bem na tela */
+    font-size: 1.7rem;
   }
 
   .label {
@@ -122,3 +121,17 @@ h1 {
     font-size: 1.5rem;
   }
 }
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 144px;
+    height: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      background-position: 30% center; /* Mostra a parte entre 15% e 35% da imagem */
+    }
+  }
