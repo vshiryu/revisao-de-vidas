@@ -1,50 +1,107 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: url('/mnt/data/file-OWXZlQ1cCps7y47hcrLVsoLX') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background: url('assets/1351417.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
 }
 
-.container {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
+.countdown-wrapper {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-#countdown {
-    display: flex;
-    justify-content: space-around;
-    font-size: 2rem;
-    margin-bottom: 20px;
+.countdown {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-#countdown div {
-    margin: 0 10px;
+.countdown div {
+  display: inline-block;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.countdown div span {
+  display: block;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.label {
+  font-size: 1rem;
+  color: hsl(0, 0%, 80%);
+}
+
+#finished {
+  font-size: 2rem;
+  color: hsl(120, 100%, 50%);
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-#verse {
+.verse {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-top: 20px;
+  color: hsl(0, 0%, 90%);
+}
+
+@media (max-width: 48rem) {
+  .countdown div span {
+    font-size: 2rem;
+  }
+
+  .label {
+    font-size: 0.875rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .countdown {
+    flex-direction: column;
+  }
+
+  .countdown div {
+    margin: 10px 0;
+  }
+
+  .countdown div span {
     font-size: 1.5rem;
-    margin-top: 20px;
-    font-style: italic;
+  }
+
+  .label {
+    font-size: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
 }

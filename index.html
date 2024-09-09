@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revisão de Vidas - Contagem Regressiva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Revisão de Vidas</h1>
-        <div id="countdown">
-            <div><span id="days"></span> dias</div>
-            <div><span id="hours"></span> horas</div>
-            <div><span id="minutes"></span> minutos</div>
-            <div><span id="seconds"></span> segundos</div>
-        </div>
-        <h2 id="finished" class="hidden">CHEGOU!</h2>
-        <div id="verse"></div>
+  <div class="countdown-wrapper">
+    <h1>Revisão de Vidas</h1>
+    <div class="countdown">
+      <div>
+        <span id="days">00</span>
+        <div class="label">Dias</div>
+      </div>
+      <div>
+        <span id="hours">00</span>
+        <div class="label">Horas</div>
+      </div>
+      <div>
+        <span id="minutes">00</span>
+        <div class="label">Minutos</div>
+      </div>
+      <div>
+        <span id="seconds">00</span>
+        <div class="label">Segundos</div>
+      </div>
     </div>
+    <h2 id="finished" class="hidden">CHEGOU!</h2>
+    <div id="verse" class="verse"></div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
