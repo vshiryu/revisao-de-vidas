@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/mnt/data/file-OWXZlQ1cCps7y47hcrLVsoLX') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#countdown div {
+    margin: 0 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#verse {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-style: italic;
+}
